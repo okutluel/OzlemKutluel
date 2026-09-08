@@ -1,119 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ozlem Kutluel — CV & Links</title>
-  <meta name="description" content="Personal landing page with CV download, LinkedIn, and contact details." />
-  <meta property="og:title" content="Ozlem Kutluel — CV & Links" />
-  <meta property="og:description" content="Download my CV, visit my LinkedIn, and get my contact info!" />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0ea5e9" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Özlem Kutluel — CV & Links</title>
+  <meta name="description" content="Özlem Kutluel — Digital Transformation and Business Intelligence.">
+  <meta property="og:title" content="Özlem Kutluel — CV & Links">
+  <meta property="og:description" content="View my CV, connect on LinkedIn, or get in touch.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#321b18">
   <style>
-    :root {
-      --bg: #0b1220;          /* deep slate */
-      --card: #0f172a;        /* slate-900 */
-      --text: #e5e7eb;        /* gray-200 */
-      --muted: #94a3b8;       /* slate-400 */
-      --brand: #38bdf8;       /* sky-400 */
-      --brand-2: #22d3ee;     /* cyan-400 */
-      --ring: rgba(56, 189, 248, 0.35);
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
+    :root { --chocolate:#321b18; --pink:#f4d7dc; --cream:#fff9f7; --muted:#725a57; }
+    * { box-sizing:border-box; }
+    html,body { min-height:100%; }
     body {
-      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 800px at 10% 10%, rgba(34,211,238,.09), transparent),
-                  radial-gradient(800px 600px at 90% 20%, rgba(56,189,248,.08), transparent),
-                  var(--bg);
-      color: var(--text);
+      margin:0; padding:24px; display:grid; place-items:center;
+      background:var(--pink); color:var(--chocolate);
+      font-family:Arial,Helvetica,sans-serif;
     }
-    .container { max-width: 880px; margin: 0 auto; padding: 32px 20px 64px; }
-    header { display: flex; align-items: center; gap: 18px; margin-top: 24px; margin-bottom: 48px; /* add this line or increase the value */}
-    .avatar {
-      width: 76px; height: 76px; border-radius: 18px; background: linear-gradient(135deg, var(--brand), var(--brand-2));
-      display: grid; place-items: center; color: #0b1220; font-weight: 800; font-size: 24px;
-      box-shadow: 0 12px 40px rgba(56,189,248,.25);
+    main {
+      width:min(100%,470px); padding:42px 34px 34px; position:relative; overflow:hidden;
+      background:var(--cream); border:1px solid rgba(50,27,24,.16); border-radius:32px;
+      box-shadow:0 24px 70px rgba(50,27,24,.16);
     }
-    h1 { font-size: 2rem; margin: 0; letter-spacing: .2px; }
-    .muted { color: var(--muted); }
-    .card {
-      background: linear-gradient(0deg, rgba(148,163,184,.05), rgba(148,163,184,.05)), var(--card);
-      border: 1px solid rgba(148,163,184,.15);
-      border-radius: 18px; padding: 22px; box-shadow: 0 12px 40px rgba(2,6,23,.35);
+    main::before {
+      content:""; position:absolute; width:150px; height:150px; right:-78px; top:-78px;
+      border-radius:50%; background:var(--pink);
     }
-    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
-    @media (min-width: 720px) { .grid { grid-template-columns: 1.2fr .8fr; } }
-
-    .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
-    .btn {
-      appearance: none; border: 1px solid rgba(56,189,248,.55); color: #06131a; background: linear-gradient(180deg, var(--brand), var(--brand-2));
-      padding: 12px 16px; border-radius: 12px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
-      box-shadow: 0 8px 30px rgba(56,189,248,.35);
+    .mark {
+      width:64px; height:64px; margin-bottom:28px; display:grid; place-items:center;
+      border-radius:22px; background:var(--chocolate); color:var(--pink);
+      font:700 20px Georgia,serif; letter-spacing:.08em;
     }
-    .btn.outline { background: transparent; color: var(--text); border-color: rgba(148,163,184,.35); box-shadow: none; }
-    .btn:hover { filter: brightness(1.05); transform: translateY(-1px); }
-
-    .info { display: grid; gap: 10px; margin-top: 8px; }
-    .info div { display: flex; align-items: center; gap: 10px; }
-    .label { font-weight: 600; color: var(--muted); width: 86px; }
-    .value a { color: var(--text); text-decoration: none; border-bottom: 1px dashed rgba(148,163,184,.35); }
-
-    footer { margin-top: 32px; text-align: center; color: var(--muted); font-size: .9rem; }
-    .qr { margin-top: 18px; display: grid; place-items: center; }
-    .notice { font-size: .9rem; color: var(--muted); margin-top: 6px; }
-    .small { font-size: .85rem; }
-    code.inline { background: rgba(148,163,184,.15); padding: 2px 6px; border-radius: 8px; }
+    h1 {
+      max-width:330px; margin:0 0 16px;
+      font:500 clamp(2.4rem,9vw,3.6rem)/.96 Georgia,"Times New Roman",serif;
+      letter-spacing:-.04em;
+    }
+    .role {
+      margin:0 0 28px; color:var(--muted); font-size:.9rem; line-height:1.5;
+      letter-spacing:.13em; text-transform:uppercase;
+    }
+    .intro { max-width:355px; margin:0 0 34px; font:italic 1.12rem/1.55 Georgia,serif; }
+    nav { display:grid; gap:12px; }
+    a.button {
+      min-height:54px; padding:0 19px; display:flex; align-items:center; justify-content:space-between;
+      border-radius:18px; text-decoration:none; font-weight:700; font-size:1rem;
+      transition:transform .18s ease,box-shadow .18s ease;
+    }
+    a.button:hover { transform:translateY(-2px); }
+    .primary { background:var(--chocolate); color:var(--cream); box-shadow:0 9px 24px rgba(50,27,24,.15); }
+    .secondary { color:var(--chocolate); border:1px solid rgba(50,27,24,.25); }
+    .arrow { font-size:1.25rem; }
+    footer { margin-top:28px; color:var(--muted); font-size:.85rem; }
+    @media (max-width:420px) { main { padding:34px 24px 28px; border-radius:26px; } }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="avatar" aria-hidden="true">OK</div>
-      <div>
-        <h1>Özlem Kutluel</h1>
-        <div class="muted">Systems Analyst / Digitization Specialist · Istanbul, Turkey</div>
-      </div>
-    </header>
-
-    <main class="grid" aria-label="Content">
-      <section class="card" aria-labelledby="actions-title">
-        <h2 id="actions-title" style="margin-top:0">Quick Links</h2>
-        <p class="muted">Download my CV or connect with me on LinkedIn</p>
-        <div class="btns">
-          <!-- Replace /cv.pdf with your actual file path in the repo -->
-          <a class="btn" href="./OzlemKutluel_CV.pdf" download>
-            <span aria-hidden="true">📄</span>
-            <span>Download CV</span>
-          </a>
-          <!-- Replace with your LinkedIn profile URL -->
-          <a class="btn outline" href="https://www.linkedin.com/in/ozlem-kutluel/" target="_blank" rel="noopener">
-            <span aria-hidden="true">🔗</span>
-            <span>LinkedIn</span>
-          </a>
-          <!-- Optional extra link, e.g. Portfolio or GitHub -->
-          <!-- <a class="btn outline" href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a> -->
-        </div>
-      </section>
-
-      <aside class="card" aria-labelledby="contact-title">
-        <h2 id="contact-title" style="margin-top:0">Contact</h2>
-        <div class="info">
-          <div><span class="label">Name</span><span class="value">Özlem (Ozzy) Kutluel</span></div>
-          <div><span class="label">Email</span><span class="value"><a href="mailto:you@example.com">ozlem.kutluel00@gmail.com</a></span></div>
-          <div><span class="label">Phone</span><span class="value"><a href="tel:+12345678900">+90 536 554 0525</a></span></div>
-          <div><span class="label">Location</span><span class="value">Istanbul, Turkey</span></div>
-        </div>
-        <p class="small notice">Feel free to reach out using any of the channels above!</p>
-      </aside>
-    </main>
-
-    <footer>
-      <div class="small">© <span id="year"></span> Özlem Kutluel. All rights reserved.</div>
-    </footer>
-  </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <main>
+    <div class="mark" aria-hidden="true">ÖK</div>
+    <h1>Özlem Kutluel</h1>
+    <p class="role">Digital Transformation · Business Intelligence</p>
+    <p class="intro">I turn complex processes and scattered data into systems people can actually use.</p>
+    <nav aria-label="Professional links">
+      <a class="button primary" href="https://www.linkedin.com/in/ozlem-kutluel/" target="_blank" rel="noopener">Connect on LinkedIn <span class="arrow">↗</span></a>
+      <a class="button secondary" href="./Ozlem_Kutluel_CV_Updated.pdf" download>Download my CV <span class="arrow">↓</span></a>
+      <a class="button secondary" href="mailto:ozlem.kutluel00@gmail.com">Email me <span class="arrow">→</span></a>
+      <a class="button secondary" href="tel:+905365540525">Call me <span class="arrow">→</span></a>
+    </nav>
+    <footer>Open to international opportunities</footer>
+  </main>
 </body>
 </html>
